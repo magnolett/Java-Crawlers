@@ -16,7 +16,7 @@ public class JSoupWC extends SettingBot {
 
 	public void testandoUm() throws IOException {
 		Connection.Response conn = Jsoup.connect("http://www.fontes'essoriafinanceira.com.br/index.php?rt=slogin")
-				.data("user", "marcolinho").data("pass", "marcolinho").userAgent("Chrome")
+				.data("user", "").data("pass", "").userAgent("Chrome")
 				.method(Connection.Method.POST).timeout(15000).execute();
 		int code = conn.statusCode();
 		System.out.println(code);
@@ -25,7 +25,7 @@ public class JSoupWC extends SettingBot {
 
 	public void testandoDois() throws Exception {
 		Connection.Response conn = Jsoup.connect("https://www.instagram.com/accounts/login/ajax/?hl=pt-br")
-				.data("username", "magnolett").data("password", "8qs53b3x").userAgent("Chrome")
+				.data("username", "").data("password", "").userAgent("Chrome")
 				.method(Connection.Method.POST).execute();
 		int code = conn.statusCode();
 		System.out.println(code);
@@ -40,7 +40,7 @@ public class JSoupWC extends SettingBot {
 		// Jsoup.connect("http://buscatextual.cnpq.br/buscatextual/busca.do").data("metodo",
 		// "buscar")
 		// .data("buscaAvancada", "0").data("filtros.buscaNome",
-		// "true").data("textoBusca", "Marcos")
+		// "true").data("textoBusca", "")
 		// .data("buscarDoutores", "true").data("resumoModalidade", "Bolsas de
 		// PQ de categorias0")
 		// .data("buscarBrasileiros", "true").data("buscarEstrangeiros", "true")
@@ -108,7 +108,7 @@ public class JSoupWC extends SettingBot {
 			x = x + 2;
 		}
 		
-		FileWriter fw = new FileWriter(new File("C:/Users/Marquinhos/Desktop/marcosv2.txt"));
+		FileWriter fw = new FileWriter(new File(""));
 		for (String part : partes) {
 			fw.write(part.toString());
 		}
